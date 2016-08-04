@@ -1,5 +1,5 @@
 
-test,http://124.193.230.15:1863/zijian.hls.video.qq.com/100104400.m3u8?cdncode=18907E7BE0798990&time=1467644565&cdn=zijian&sdtfrom=v10431&platform=10403&butype=1&scheduleflag=1&buname=qqlive
+test,http://vlive2.hls.tc.qq.com:1863/100001500.m3u8?vkey=DEA17D9BD47CB2ACFA6229C2AE6C4837526C0C03E535949BBDCD633BB3E296641C6A642A005024C26979B0DFA337DD76E3F08793804BAAF446D0FF5269AD37B0B36F624E753181FBF4A3A19D1B19C30B4292BD0E87E98F69
 
 搜狐东方卫视,http://gslb.tv.sohu.com/live?cid=346255&ver=seg&ckey=fMZ4Nlkz8VXzb2k7uPS&type=hls&prot=1&sig=6dmShtZfXIPDDBj738XcecO6tdc.
 搜狐北京卫视,http://gslb.tv.sohu.com/live?cid=346249&ver=seg&ckey=fMZ4Nl-p8VXzb2k7uPS&type=hls&prot=1&sig=xfA1ym5m8HvZpgLhHozn6Ytl6OM.

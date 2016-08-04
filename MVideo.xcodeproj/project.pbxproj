@@ -19,6 +19,9 @@
 		C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73926EB1D1D2FAD00C93A12 /* AVKit.framework */; };
 		C73926F21D1D33C600C93A12 /* videosList3.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F11D1D33C600C93A12 /* videosList3.txt */; };
 		C73926F41D1D33CF00C93A12 /* videosList2.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73926F31D1D33CF00C93A12 /* videosList2.txt */; };
+		C77C8C3F1D534AEC0060FF18 /* libSohuPlayerCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C77C8C3E1D534AEC0060FF18 /* libSohuPlayerCore.a */; };
+		C77C8C411D534C260060FF18 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77C8C401D534C260060FF18 /* CFNetwork.framework */; };
+		C77C8C431D534C860060FF18 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77C8C421D534C860060FF18 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		C73926EB1D1D2FAD00C93A12 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		C73926F11D1D33C600C93A12 /* videosList3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList3.txt; sourceTree = "<group>"; };
 		C73926F31D1D33CF00C93A12 /* videosList2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = videosList2.txt; sourceTree = "<group>"; };
+		C77C8C3E1D534AEC0060FF18 /* libSohuPlayerCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSohuPlayerCore.a; path = "SohuPlayerCore/build/Debug-iphoneos/libSohuPlayerCore.a"; sourceTree = "<group>"; };
+		C77C8C401D534C260060FF18 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C77C8C421D534C860060FF18 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C77C8C431D534C860060FF18 /* SystemConfiguration.framework in Frameworks */,
+				C77C8C411D534C260060FF18 /* CFNetwork.framework in Frameworks */,
+				C77C8C3F1D534AEC0060FF18 /* libSohuPlayerCore.a in Frameworks */,
 				C73926EC1D1D2FAD00C93A12 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +65,9 @@
 		4F16F3861D15926800E8B25D = {
 			isa = PBXGroup;
 			children = (
+				C77C8C421D534C860060FF18 /* SystemConfiguration.framework */,
+				C77C8C401D534C260060FF18 /* CFNetwork.framework */,
+				C77C8C3E1D534AEC0060FF18 /* libSohuPlayerCore.a */,
 				C73926EB1D1D2FAD00C93A12 /* AVKit.framework */,
 				4F16F3911D15926800E8B25D /* MVideo */,
 				4F16F3901D15926800E8B25D /* Products */,
@@ -293,9 +305,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = "./SohuPlayerCore/**";
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SohuPlayerCore/build/Debug-iphoneos",
+					"./SohuPlayerCore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,9 +326,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				HEADER_SEARCH_PATHS = "./SohuPlayerCore/**";
 				INFOPLIST_FILE = MVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SohuPlayerCore/build/Debug-iphoneos",
+					"./SohuPlayerCore/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohu.mobile.MVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

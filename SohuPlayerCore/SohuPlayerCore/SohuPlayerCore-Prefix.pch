@@ -1,0 +1,32 @@
+//
+// Prefix header for all source files of the 'SohuPlayerCore' target in the 'SohuPlayerCore' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(__version__)  ([[[UIDevice currentDevice] systemVersion] compare:__version__ options:NSNumericSearch] != NSOrderedAscending)
+
+// debug info
+#ifdef DEBUG
+//    #define DebugLog(fmt, ...)   NSLog((@"[DEBUG]%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__)
+    #define DebugLog(...)
+
+//    #define SDebugLog(fmt, ...)  NSLog((@"[DEBUG]%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__)
+    #define SDebugLog(...)
+
+    #define MDebugLog(fmt, ...)   NSLog((@"[DEBUG-WangZY]%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__)
+//    #define MDebugLog(...)
+#else
+    #define DebugLog(...)
+    #define SDebugLog(...)
+    #define MDebugLog(...)
+//    #define MDebugLog(fmt, ...)   NSLog((@"[DEBUG-WangZY]%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__)
+
+//assert
+#   define NDEBUG
+#   include <assert.h>
+
+#endif

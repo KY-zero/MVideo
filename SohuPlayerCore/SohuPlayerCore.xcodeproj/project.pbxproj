@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8048825F18BDE84900956E0F /* SHPlayerSDKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8048825718BDE84900956E0F /* SHPlayerSDKUtil.m */; };
+		8048827218BDF40B00956E0F /* SHMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8048826A18BDF40B00956E0F /* SHMoviePlayerController.m */; };
+		8048827318BDF40B00956E0F /* SHPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8048826C18BDF40B00956E0F /* SHPlayerManager.m */; };
+		8048827C18BE094900956E0F /* SHMoviePlayerController.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8048826918BDF40B00956E0F /* SHMoviePlayerController.h */; };
+		804960B418BB1F2800789C41 /* SHMedia.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 808876541810E92900F584B6 /* SHMedia.h */; };
+		8087BFEB18C0526100C0117E /* SHVideoSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8087BFEA18C0526100C0117E /* SHVideoSourceManager.m */; };
+		808876581810E92900F584B6 /* SHMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 808876551810E92900F584B6 /* SHMedia.m */; };
+		808876591810E92900F584B6 /* SHMediaSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 808876571810E92900F584B6 /* SHMediaSourceManager.m */; };
+		80CAA5FF18CEB49D003E4A05 /* SHMoviePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CAA5FE18CEB49D003E4A05 /* SHMoviePlayer.m */; };
+		80D36AF1182888F800D38710 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D36AF0182888F800D38710 /* Foundation.framework */; };
+		80E70FF718E3E69C00EA31FB /* PKVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E70FEC18E3E69C00EA31FB /* PKVideoPlayer.m */; };
+		80E70FF818E3E69C00EA31FB /* PKVideoPlayerError.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E70FEE18E3E69C00EA31FB /* PKVideoPlayerError.m */; };
+		80E70FF918E3E69C00EA31FB /* PKVideoPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E70FF018E3E69C00EA31FB /* PKVideoPlayerItem.m */; };
+		80E70FFA18E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E70FF418E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.m */; };
+		80E70FFB18E3E69C00EA31FB /* SHPMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E70FF618E3E69C00EA31FB /* SHPMoviePlayerController.m */; };
+		C77C8C2C1D53325F0060FF18 /* NSDictionary+Shortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C2B1D53325F0060FF18 /* NSDictionary+Shortcuts.m */; };
+		C77C8C2F1D5332D30060FF18 /* NSStringExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C2E1D5332D30060FF18 /* NSStringExtend.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C77C8C351D5335130060FF18 /* SHReachability+.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C321D5335130060FF18 /* SHReachability+.m */; };
+		C77C8C361D5335130060FF18 /* SHReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C341D5335130060FF18 /* SHReachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C77C8C391D5337380060FF18 /* ResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C381D5337380060FF18 /* ResponseItem.m */; };
+		C77C8C3C1D53385C0060FF18 /* VideoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C77C8C3B1D53385C0060FF18 /* VideoItem.m */; };
+		CE3FF0CF1814E00000080E08 /* SHMovieLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FF0CE1814E00000080E08 /* SHMovieLogging.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8027DFFA17F41051009BA352 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				8048827C18BE094900956E0F /* SHMoviePlayerController.h in Copy Files */,
+				804960B418BB1F2800789C41 /* SHMedia.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		19383C0918E27AB700837172 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-gpooowprffedpnciboyakmussamf/Build/Products/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		19383C0A18E27AB700837172 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-gpooowprffedpnciboyakmussamf/Build/Products/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		19383C0B18E27AB700837172 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-gpooowprffedpnciboyakmussamf/Build/Products/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		8007EECC1929EE8100EA50F1 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		8007EECD1929EE8100EA50F1 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		8007EECE1929EE8100EA50F1 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		800E4545181F7CB7009B7430 /* PlayerCoreBuildShell.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PlayerCoreBuildShell.sh; sourceTree = "<group>"; };
+		8027DFFC17F41051009BA352 /* libSohuPlayerCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSohuPlayerCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8027E00317F41051009BA352 /* SohuPlayerCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SohuPlayerCore-Prefix.pch"; sourceTree = "<group>"; };
+		803D66BA193F315900374E0F /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-borvqexnyoncuxghgbisywolwvlf/Build/Products/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		803D66BB193F315900374E0F /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-borvqexnyoncuxghgbisywolwvlf/Build/Products/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		803D66BC193F315900374E0F /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-borvqexnyoncuxghgbisywolwvlf/Build/Products/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		8048825418BDE84900956E0F /* SHPlayerDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlayerDefinitions.h; sourceTree = "<group>"; };
+		8048825618BDE84900956E0F /* SHPlayerSDKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlayerSDKUtil.h; sourceTree = "<group>"; };
+		8048825718BDE84900956E0F /* SHPlayerSDKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPlayerSDKUtil.m; sourceTree = "<group>"; };
+		8048825818BDE84900956E0F /* SHPropertyDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPropertyDefinitions.h; sourceTree = "<group>"; };
+		8048826918BDF40B00956E0F /* SHMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoviePlayerController.h; sourceTree = "<group>"; };
+		8048826A18BDF40B00956E0F /* SHMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoviePlayerController.m; sourceTree = "<group>"; };
+		8048826B18BDF40B00956E0F /* SHPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlayerManager.h; sourceTree = "<group>"; };
+		8048826C18BDF40B00956E0F /* SHPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPlayerManager.m; sourceTree = "<group>"; };
+		804EF2BB19A4A25A00402FBC /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		804EF2BC19A4A25A00402FBC /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		804EF2BD19A4A25A00402FBC /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		805AC1E319232EB100BBE7B0 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		805AC1E419232EB100BBE7B0 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		805AC1E519232EB100BBE7B0 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		806B791119CBDBD0002CD442 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		806B791219CBDBD0002CD442 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		806B791319CBDBD0002CD442 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		806B793519CBEE47002CD442 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		806B793619CBEE47002CD442 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		806B793719CBEE47002CD442 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		806B794119CC0329002CD442 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		806B794219CC0329002CD442 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		806B794319CC0329002CD442 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		806B795319CC3293002CD442 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		806B795419CC3293002CD442 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		806B795519CC3293002CD442 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80840B5318FCDA470006B048 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80840B5418FCDA470006B048 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80840B5518FCDA470006B048 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80840B5918FCDEA70006B048 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80840B5A18FCDEA70006B048 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80840B5B18FCDEA70006B048 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80840BA618FD3D0A0006B048 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80840BA718FD3D0A0006B048 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80840BA818FD3D0A0006B048 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		8087BFE918C0526100C0117E /* SHVideoSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVideoSourceManager.h; sourceTree = "<group>"; };
+		8087BFEA18C0526100C0117E /* SHVideoSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHVideoSourceManager.m; sourceTree = "<group>"; };
+		808876541810E92900F584B6 /* SHMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMedia.h; sourceTree = "<group>"; };
+		808876551810E92900F584B6 /* SHMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMedia.m; sourceTree = "<group>"; };
+		808876561810E92900F584B6 /* SHMediaSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMediaSourceManager.h; sourceTree = "<group>"; };
+		808876571810E92900F584B6 /* SHMediaSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMediaSourceManager.m; sourceTree = "<group>"; };
+		809BFF591933619B008F4E89 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809BFF5A1933619B008F4E89 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809BFF5B1933619B008F4E89 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F114718E90C2B007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F114818E90C2B007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F114918E90C2B007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F115018E93B2A007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F115118E93B2A007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F115218E93B2A007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F115618E94794007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F115718E94794007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F115818E94794007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F115C18E951CF007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F115D18E951CF007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F115E18E951CF007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F118418E9643A007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F118518E9643A007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F118618E9643A007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F119B18EA54A7007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F119C18EA54A7007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F119D18EA54A7007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../../../../../../../Library/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F11F918EAC4C5007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F11FA18EAC4C5007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F11FB18EAC4C5007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F124018EBBE56007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F124118EBBE56007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F124218EBBE56007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F125918ED4EF5007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F125A18ED4EF5007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F125B18ED4EF5007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		809F129718ED6067007B1F73 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		809F129818ED6067007B1F73 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		809F129918ED6067007B1F73 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80B4E9D118F3DC2F00998850 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80B4E9D218F3DC2F00998850 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80B4E9D318F3DC2F00998850 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80B4E9D718F3EC9900998850 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80B4E9D818F3EC9900998850 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80B4E9D918F3EC9900998850 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80B4E9EE18F51B0B00998850 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80B4E9EF18F51B0B00998850 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80B4E9F018F51B0B00998850 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80B4E9F418F52CEA00998850 /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Debug-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80B4E9F518F52CEA00998850 /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Debug-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80B4E9F618F52CEA00998850 /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Debug-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80CAA5FD18CEB49D003E4A05 /* SHMoviePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoviePlayer.h; sourceTree = "<group>"; };
+		80CAA5FE18CEB49D003E4A05 /* SHMoviePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMoviePlayer.m; sourceTree = "<group>"; };
+		80D36AF0182888F800D38710 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		80D818E318F8081400773F7B /* libDataCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDataCenter.a; path = "../Modules/DataCenter/build/Release-iphoneos/libDataCenter.a"; sourceTree = "<group>"; };
+		80D818E418F8081400773F7B /* libLogCenter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLogCenter.a; path = "../Modules/LogCenter/build/Release-iphoneos/libLogCenter.a"; sourceTree = "<group>"; };
+		80D818E518F8081400773F7B /* libUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUtility.a; path = "../Modules/Utility/build/Release-iphoneos/libUtility.a"; sourceTree = "<group>"; };
+		80E70FEB18E3E69C00EA31FB /* PKVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKVideoPlayer.h; sourceTree = "<group>"; };
+		80E70FEC18E3E69C00EA31FB /* PKVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKVideoPlayer.m; sourceTree = "<group>"; };
+		80E70FED18E3E69C00EA31FB /* PKVideoPlayerError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKVideoPlayerError.h; sourceTree = "<group>"; };
+		80E70FEE18E3E69C00EA31FB /* PKVideoPlayerError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKVideoPlayerError.m; sourceTree = "<group>"; };
+		80E70FEF18E3E69C00EA31FB /* PKVideoPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKVideoPlayerItem.h; sourceTree = "<group>"; };
+		80E70FF018E3E69C00EA31FB /* PKVideoPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKVideoPlayerItem.m; sourceTree = "<group>"; };
+		80E70FF118E3E69C00EA31FB /* PKVideoPlayerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKVideoPlayerKit.h; sourceTree = "<group>"; };
+		80E70FF218E3E69C00EA31FB /* SHMoviePlayback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMoviePlayback.h; sourceTree = "<group>"; };
+		80E70FF318E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHPMoviePlayerController+PKVideoPlayerDelegate.h"; sourceTree = "<group>"; };
+		80E70FF418E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHPMoviePlayerController+PKVideoPlayerDelegate.m"; sourceTree = "<group>"; };
+		80E70FF518E3E69C00EA31FB /* SHPMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPMoviePlayerController.h; sourceTree = "<group>"; };
+		80E70FF618E3E69C00EA31FB /* SHPMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPMoviePlayerController.m; sourceTree = "<group>"; };
+		C77C8C2A1D53325F0060FF18 /* NSDictionary+Shortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Shortcuts.h"; sourceTree = "<group>"; };
+		C77C8C2B1D53325F0060FF18 /* NSDictionary+Shortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Shortcuts.m"; sourceTree = "<group>"; };
+		C77C8C2D1D5332D30060FF18 /* NSStringExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtend.h; sourceTree = "<group>"; };
+		C77C8C2E1D5332D30060FF18 /* NSStringExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtend.m; sourceTree = "<group>"; };
+		C77C8C311D5335130060FF18 /* SHReachability+.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHReachability+.h"; sourceTree = "<group>"; };
+		C77C8C321D5335130060FF18 /* SHReachability+.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHReachability+.m"; sourceTree = "<group>"; };
+		C77C8C331D5335130060FF18 /* SHReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHReachability.h; sourceTree = "<group>"; };
+		C77C8C341D5335130060FF18 /* SHReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHReachability.m; sourceTree = "<group>"; };
+		C77C8C371D5337380060FF18 /* ResponseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseItem.h; sourceTree = "<group>"; };
+		C77C8C381D5337380060FF18 /* ResponseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseItem.m; sourceTree = "<group>"; };
+		C77C8C3A1D53385C0060FF18 /* VideoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoItem.h; sourceTree = "<group>"; };
+		C77C8C3B1D53385C0060FF18 /* VideoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoItem.m; sourceTree = "<group>"; };
+		CE3FF0CD1814E00000080E08 /* SHMovieLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMovieLogging.h; sourceTree = "<group>"; };
+		CE3FF0CE1814E00000080E08 /* SHMovieLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMovieLogging.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8027DFF917F41051009BA352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D36AF1182888F800D38710 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8027DFF317F41051009BA352 = {
+			isa = PBXGroup;
+			children = (
+				8027E00D17F41094009BA352 /* Classes */,
+				8027E00117F41051009BA352 /* SohuPlayerCore */,
+				8027DFFE17F41051009BA352 /* Frameworks */,
+				8027DFFD17F41051009BA352 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8027DFFD17F41051009BA352 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8027DFFC17F41051009BA352 /* libSohuPlayerCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8027DFFE17F41051009BA352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				806B795319CC3293002CD442 /* libDataCenter.a */,
+				806B795419CC3293002CD442 /* libLogCenter.a */,
+				806B795519CC3293002CD442 /* libUtility.a */,
+				806B794119CC0329002CD442 /* libDataCenter.a */,
+				806B794219CC0329002CD442 /* libLogCenter.a */,
+				806B794319CC0329002CD442 /* libUtility.a */,
+				806B793519CBEE47002CD442 /* libDataCenter.a */,
+				806B793619CBEE47002CD442 /* libLogCenter.a */,
+				806B793719CBEE47002CD442 /* libUtility.a */,
+				806B791119CBDBD0002CD442 /* libDataCenter.a */,
+				806B791219CBDBD0002CD442 /* libLogCenter.a */,
+				806B791319CBDBD0002CD442 /* libUtility.a */,
+				804EF2BB19A4A25A00402FBC /* libDataCenter.a */,
+				804EF2BC19A4A25A00402FBC /* libLogCenter.a */,
+				804EF2BD19A4A25A00402FBC /* libUtility.a */,
+				803D66BA193F315900374E0F /* libDataCenter.a */,
+				803D66BB193F315900374E0F /* libLogCenter.a */,
+				803D66BC193F315900374E0F /* libUtility.a */,
+				809BFF591933619B008F4E89 /* libDataCenter.a */,
+				809BFF5A1933619B008F4E89 /* libLogCenter.a */,
+				809BFF5B1933619B008F4E89 /* libUtility.a */,
+				8007EECC1929EE8100EA50F1 /* libDataCenter.a */,
+				8007EECD1929EE8100EA50F1 /* libLogCenter.a */,
+				8007EECE1929EE8100EA50F1 /* libUtility.a */,
+				805AC1E319232EB100BBE7B0 /* libDataCenter.a */,
+				805AC1E419232EB100BBE7B0 /* libLogCenter.a */,
+				805AC1E519232EB100BBE7B0 /* libUtility.a */,
+				80840BA618FD3D0A0006B048 /* libDataCenter.a */,
+				80840BA718FD3D0A0006B048 /* libLogCenter.a */,
+				80840BA818FD3D0A0006B048 /* libUtility.a */,
+				80840B5918FCDEA70006B048 /* libDataCenter.a */,
+				80840B5A18FCDEA70006B048 /* libLogCenter.a */,
+				80840B5B18FCDEA70006B048 /* libUtility.a */,
+				80840B5318FCDA470006B048 /* libDataCenter.a */,
+				80840B5418FCDA470006B048 /* libLogCenter.a */,
+				80840B5518FCDA470006B048 /* libUtility.a */,
+				80D818E318F8081400773F7B /* libDataCenter.a */,
+				80D818E418F8081400773F7B /* libLogCenter.a */,
+				80D818E518F8081400773F7B /* libUtility.a */,
+				80B4E9F418F52CEA00998850 /* libDataCenter.a */,
+				80B4E9F518F52CEA00998850 /* libLogCenter.a */,
+				80B4E9F618F52CEA00998850 /* libUtility.a */,
+				80B4E9EE18F51B0B00998850 /* libDataCenter.a */,
+				80B4E9EF18F51B0B00998850 /* libLogCenter.a */,
+				80B4E9F018F51B0B00998850 /* libUtility.a */,
+				80B4E9D718F3EC9900998850 /* libDataCenter.a */,
+				80B4E9D818F3EC9900998850 /* libLogCenter.a */,
+				80B4E9D918F3EC9900998850 /* libUtility.a */,
+				80B4E9D118F3DC2F00998850 /* libDataCenter.a */,
+				80B4E9D218F3DC2F00998850 /* libLogCenter.a */,
+				80B4E9D318F3DC2F00998850 /* libUtility.a */,
+				809F129718ED6067007B1F73 /* libDataCenter.a */,
+				809F129818ED6067007B1F73 /* libLogCenter.a */,
+				809F129918ED6067007B1F73 /* libUtility.a */,
+				809F125918ED4EF5007B1F73 /* libDataCenter.a */,
+				809F125A18ED4EF5007B1F73 /* libLogCenter.a */,
+				809F125B18ED4EF5007B1F73 /* libUtility.a */,
+				809F124018EBBE56007B1F73 /* libDataCenter.a */,
+				809F124118EBBE56007B1F73 /* libLogCenter.a */,
+				809F124218EBBE56007B1F73 /* libUtility.a */,
+				809F11F918EAC4C5007B1F73 /* libDataCenter.a */,
+				809F11FA18EAC4C5007B1F73 /* libLogCenter.a */,
+				809F11FB18EAC4C5007B1F73 /* libUtility.a */,
+				809F119B18EA54A7007B1F73 /* libDataCenter.a */,
+				809F119C18EA54A7007B1F73 /* libLogCenter.a */,
+				809F119D18EA54A7007B1F73 /* libUtility.a */,
+				809F118418E9643A007B1F73 /* libDataCenter.a */,
+				809F118518E9643A007B1F73 /* libLogCenter.a */,
+				809F118618E9643A007B1F73 /* libUtility.a */,
+				809F115C18E951CF007B1F73 /* libDataCenter.a */,
+				809F115D18E951CF007B1F73 /* libLogCenter.a */,
+				809F115E18E951CF007B1F73 /* libUtility.a */,
+				809F115618E94794007B1F73 /* libDataCenter.a */,
+				809F115718E94794007B1F73 /* libLogCenter.a */,
+				809F115818E94794007B1F73 /* libUtility.a */,
+				809F115018E93B2A007B1F73 /* libDataCenter.a */,
+				809F115118E93B2A007B1F73 /* libLogCenter.a */,
+				809F115218E93B2A007B1F73 /* libUtility.a */,
+				809F114718E90C2B007B1F73 /* libDataCenter.a */,
+				809F114818E90C2B007B1F73 /* libLogCenter.a */,
+				809F114918E90C2B007B1F73 /* libUtility.a */,
+				19383C0918E27AB700837172 /* libDataCenter.a */,
+				19383C0A18E27AB700837172 /* libLogCenter.a */,
+				19383C0B18E27AB700837172 /* libUtility.a */,
+				80D36AF0182888F800D38710 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8027E00117F41051009BA352 /* SohuPlayerCore */ = {
+			isa = PBXGroup;
+			children = (
+				8027E00217F41051009BA352 /* Supporting Files */,
+			);
+			path = SohuPlayerCore;
+			sourceTree = "<group>";
+		};
+		8027E00217F41051009BA352 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				800E4545181F7CB7009B7430 /* PlayerCoreBuildShell.sh */,
+				8027E00317F41051009BA352 /* SohuPlayerCore-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8027E00D17F41094009BA352 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C77C8C1A1D532F780060FF18 /* VideoAlbum */,
+				8048826818BDF40B00956E0F /* API */,
+				808876531810E90D00F584B6 /* DataManager */,
+				8048825318BDE84900956E0F /* Public */,
+				CE30FCC91809348100A06DD4 /* Player */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8048825318BDE84900956E0F /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8048825418BDE84900956E0F /* SHPlayerDefinitions.h */,
+				8048825818BDE84900956E0F /* SHPropertyDefinitions.h */,
+				8048825618BDE84900956E0F /* SHPlayerSDKUtil.h */,
+				8048825718BDE84900956E0F /* SHPlayerSDKUtil.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		8048826818BDF40B00956E0F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8048826918BDF40B00956E0F /* SHMoviePlayerController.h */,
+				8048826A18BDF40B00956E0F /* SHMoviePlayerController.m */,
+				8048826B18BDF40B00956E0F /* SHPlayerManager.h */,
+				8048826C18BDF40B00956E0F /* SHPlayerManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		808876531810E90D00F584B6 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				808876541810E92900F584B6 /* SHMedia.h */,
+				808876551810E92900F584B6 /* SHMedia.m */,
+				808876561810E92900F584B6 /* SHMediaSourceManager.h */,
+				808876571810E92900F584B6 /* SHMediaSourceManager.m */,
+				8087BFE918C0526100C0117E /* SHVideoSourceManager.h */,
+				8087BFEA18C0526100C0117E /* SHVideoSourceManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		80CAA5FC18CEB49D003E4A05 /* SystemPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				80E70FE918E3E69C00EA31FB /* SHMoviePlayerController */,
+				80CAA5FD18CEB49D003E4A05 /* SHMoviePlayer.h */,
+				80CAA5FE18CEB49D003E4A05 /* SHMoviePlayer.m */,
+			);
+			path = SystemPlayer;
+			sourceTree = "<group>";
+		};
+		80E70FE918E3E69C00EA31FB /* SHMoviePlayerController */ = {
+			isa = PBXGroup;
+			children = (
+				80E70FEA18E3E69C00EA31FB /* PKVideoPlayer */,
+				80E70FF218E3E69C00EA31FB /* SHMoviePlayback.h */,
+				80E70FF318E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.h */,
+				80E70FF418E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.m */,
+				80E70FF518E3E69C00EA31FB /* SHPMoviePlayerController.h */,
+				80E70FF618E3E69C00EA31FB /* SHPMoviePlayerController.m */,
+			);
+			path = SHMoviePlayerController;
+			sourceTree = "<group>";
+		};
+		80E70FEA18E3E69C00EA31FB /* PKVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				80E70FEB18E3E69C00EA31FB /* PKVideoPlayer.h */,
+				80E70FEC18E3E69C00EA31FB /* PKVideoPlayer.m */,
+				80E70FED18E3E69C00EA31FB /* PKVideoPlayerError.h */,
+				80E70FEE18E3E69C00EA31FB /* PKVideoPlayerError.m */,
+				80E70FEF18E3E69C00EA31FB /* PKVideoPlayerItem.h */,
+				80E70FF018E3E69C00EA31FB /* PKVideoPlayerItem.m */,
+				80E70FF118E3E69C00EA31FB /* PKVideoPlayerKit.h */,
+			);
+			path = PKVideoPlayer;
+			sourceTree = "<group>";
+		};
+		C77C8C1A1D532F780060FF18 /* VideoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				C77C8C2A1D53325F0060FF18 /* NSDictionary+Shortcuts.h */,
+				C77C8C2B1D53325F0060FF18 /* NSDictionary+Shortcuts.m */,
+				C77C8C2D1D5332D30060FF18 /* NSStringExtend.h */,
+				C77C8C2E1D5332D30060FF18 /* NSStringExtend.m */,
+				C77C8C371D5337380060FF18 /* ResponseItem.h */,
+				C77C8C381D5337380060FF18 /* ResponseItem.m */,
+				C77C8C3A1D53385C0060FF18 /* VideoItem.h */,
+				C77C8C3B1D53385C0060FF18 /* VideoItem.m */,
+				C77C8C301D5335130060FF18 /* Reachability */,
+			);
+			path = VideoAlbum;
+			sourceTree = "<group>";
+		};
+		C77C8C301D5335130060FF18 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C77C8C311D5335130060FF18 /* SHReachability+.h */,
+				C77C8C321D5335130060FF18 /* SHReachability+.m */,
+				C77C8C331D5335130060FF18 /* SHReachability.h */,
+				C77C8C341D5335130060FF18 /* SHReachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		CE30FCC91809348100A06DD4 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				80CAA5FC18CEB49D003E4A05 /* SystemPlayer */,
+				CE3FF0CC1814DFDE00080E08 /* PlayerLogging */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CE3FF0CC1814DFDE00080E08 /* PlayerLogging */ = {
+			isa = PBXGroup;
+			children = (
+				CE3FF0CD1814E00000080E08 /* SHMovieLogging.h */,
+				CE3FF0CE1814E00000080E08 /* SHMovieLogging.m */,
+			);
+			path = PlayerLogging;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8027DFFB17F41051009BA352 /* SohuPlayerCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8027E00A17F41051009BA352 /* Build configuration list for PBXNativeTarget "SohuPlayerCore" */;
+			buildPhases = (
+				8027DFF817F41051009BA352 /* Sources */,
+				8027DFF917F41051009BA352 /* Frameworks */,
+				8027DFFA17F41051009BA352 /* Copy Files */,
+				800E4546181F7CD3009B7430 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SohuPlayerCore;
+			productName = SohuPlayerCore;
+			productReference = 8027DFFC17F41051009BA352 /* libSohuPlayerCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8027DFF417F41051009BA352 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Sohu Inc.";
+			};
+			buildConfigurationList = 8027DFF717F41051009BA352 /* Build configuration list for PBXProject "SohuPlayerCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8027DFF317F41051009BA352;
+			productRefGroup = 8027DFFD17F41051009BA352 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8027DFFB17F41051009BA352 /* SohuPlayerCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		800E4546181F7CD3009B7430 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8027DFF817F41051009BA352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77C8C2C1D53325F0060FF18 /* NSDictionary+Shortcuts.m in Sources */,
+				80E70FF918E3E69C00EA31FB /* PKVideoPlayerItem.m in Sources */,
+				C77C8C361D5335130060FF18 /* SHReachability.m in Sources */,
+				CE3FF0CF1814E00000080E08 /* SHMovieLogging.m in Sources */,
+				808876581810E92900F584B6 /* SHMedia.m in Sources */,
+				C77C8C351D5335130060FF18 /* SHReachability+.m in Sources */,
+				C77C8C391D5337380060FF18 /* ResponseItem.m in Sources */,
+				C77C8C2F1D5332D30060FF18 /* NSStringExtend.m in Sources */,
+				80E70FFA18E3E69C00EA31FB /* SHPMoviePlayerController+PKVideoPlayerDelegate.m in Sources */,
+				80CAA5FF18CEB49D003E4A05 /* SHMoviePlayer.m in Sources */,
+				8048825F18BDE84900956E0F /* SHPlayerSDKUtil.m in Sources */,
+				80E70FF718E3E69C00EA31FB /* PKVideoPlayer.m in Sources */,
+				80E70FFB18E3E69C00EA31FB /* SHPMoviePlayerController.m in Sources */,
+				80E70FF818E3E69C00EA31FB /* PKVideoPlayerError.m in Sources */,
+				8048827318BDF40B00956E0F /* SHPlayerManager.m in Sources */,
+				C77C8C3C1D53385C0060FF18 /* VideoItem.m in Sources */,
+				8048827218BDF40B00956E0F /* SHMoviePlayerController.m in Sources */,
+				808876591810E92900F584B6 /* SHMediaSourceManager.m in Sources */,
+				8087BFEB18C0526100C0117E /* SHVideoSourceManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8027E00817F41051009BA352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8027E00917F41051009BA352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8027E00B17F41051009BA352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SohuPlayerCore.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SohuPlayerCore/SohuPlayerCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../Modules/ASIHttpRequest/**",
+					"../Modules/DataCenter/**",
+					"../Modules/LogCenter/**",
+					"../Modules/Utility/**",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/OADSDK",
+					"$(PROJECT_DIR)/OADSDK",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Release-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-borvqexnyoncuxghgbisywolwvlf/Build/Products/Release-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 arm64 armv7s";
+			};
+			name = Debug;
+		};
+		8027E00C17F41051009BA352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SohuPlayerCore.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SohuPlayerCore/SohuPlayerCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../Modules/ASIHttpRequest/**",
+					"../Modules/DataCenter/**",
+					"../Modules/LogCenter/**",
+					"../Modules/Utility/**",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/OADSDK",
+					"$(PROJECT_DIR)/OADSDK",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Release-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-borvqexnyoncuxghgbisywolwvlf/Build/Products/Release-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SohuPlayerDevDemo-blqdxjfewwliqhgyshcwgtyklaxi/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv7 arm64 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8027DFF717F41051009BA352 /* Build configuration list for PBXProject "SohuPlayerCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8027E00817F41051009BA352 /* Debug */,
+				8027E00917F41051009BA352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8027E00A17F41051009BA352 /* Build configuration list for PBXNativeTarget "SohuPlayerCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8027E00B17F41051009BA352 /* Debug */,
+				8027E00C17F41051009BA352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8027DFF417F41051009BA352 /* Project object */;
+}
